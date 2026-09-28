@@ -1,18 +1,67 @@
-# Salesforce DX Project: Next Steps
+# Salesforce Event Management System
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+A Salesforce-based Event Management System developed using Apex, Lightning Web Components (LWC), SOQL, and Salesforce automation to manage events and attendee registrations.
 
-## How Do You Plan to Deploy Your Changes?
+## Features
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+- Event listing and management
+- Event registration for users
+- Attendee management
+- Duplicate registration prevention
+- Registration date tracking
+- Ticket type management
+- Registration status management
+- Automated email functionality
+- Scheduled event processing
+- Batch processing for event reminders
+- Validation rules for data integrity
+- Salesforce reports and dashboards
 
-## Configure Your Salesforce DX Project
+## Salesforce Objects
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+- Event__c
+- Registration__c
+- Attendee__c
+- Vendor__c
+- Payment__c
+- Event_Vendor__c
 
-## Read All About It
+## Apex Components
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+- EventController
+- PreventDuplicateRegistration
+- RegistrationEmail
+- EventScheduler
+- EventReminderBatch
+
+## Technologies Used
+
+- Salesforce
+- Apex
+- Lightning Web Components (LWC)
+- SOQL
+- Salesforce Objects
+- Validation Rules
+- Scheduled Apex
+- Batch Apex
+- Salesforce Reports & Dashboards
+
+## Project Workflow
+
+1. User views available events.
+2. User selects an event and clicks Register.
+3. System identifies the logged-in user's Contact/Attendee record.
+4. Registration is created against the selected event.
+5. Duplicate registration is prevented through validation/Apex logic.
+6. Registration details are stored in Salesforce.
+7. Automated email/reminder processes handle subsequent communication.
+
+## Project Screenshots
+
+Screenshots demonstrating the Event Management System will be added here.
+
+## Author
+
+Anurag Singh
+
+MCA | Salesforce & Software Development
