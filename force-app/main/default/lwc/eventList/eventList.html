@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Event List">
+
+        <template if:true={events}>
+            <template for:each={events} for:item="event">
+
+                <div key={event.Id} class="slds-box slds-m-around_small">
+
+                    <p><b>{event.Name}</b></p>
+                    <p>📍 Location: {event.Location__c}</p>
+                    <p>📅 Start: {event.Start_Date__c}</p>
+                    <p>📅 End: {event.End_Date__c}</p>
+
+                    <lightning-button 
+                        label="Register"
+                        data-id={event.Id}
+                        onclick={handleRegister}
+                        variant="brand">
+                    </lightning-button>
+
+                </div>
+
+            </template>
+        </template>
+
+        <template if:false={events}>
+            <p class="slds-p-around_medium">No events available</p>
+        </template>
+
+    </lightning-card>
+</template>
